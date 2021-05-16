@@ -31,15 +31,16 @@ Pronto sua aplicação estará rodando no endereço http://localhost:3000 .
 
 ### API endpoints
 
-### LISTAR USUÁRIOS
+LISTAR USUÁRIOS
 
 GET `/users`
 
-### BUSCAR USUÁRIO POR ID
+BUSCAR USUÁRIO POR ID
 
 GET `/users/:id`
 
-### CRIAR USUÁRIO
+CRIAR USUÁRIO
+
 POST `/users/`
 
 `
@@ -50,7 +51,7 @@ POST `/users/`
 }
 `
 
-### ATULIZAR USUÁRIO
+ATULIZAR USUÁRIO
 
 PUT `users/:id`
 
@@ -61,7 +62,7 @@ PUT `users/:id`
 "password": "123123"
 }`
 
-### EXCLUIR USUÁRIO
+EXCLUIR USUÁRIO
 
 DELETE `/users/:id`
 
