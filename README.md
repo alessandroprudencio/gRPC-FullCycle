@@ -1,6 +1,6 @@
 # gRPC-Node
 
-API de usuários REST que se comunica via gRPC com microsserviço de usuários criado com gRPC
+API REST que se comunica via gRPC com microsserviço de usuários criado com gRPC
 
 ### Pré-requisitos
 
