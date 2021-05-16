@@ -29,7 +29,7 @@ docker-compose up -d
 
 Pronto sua aplicação estará rodando no endereço http://localhost:3000 .
 
-# API endpoints
+### API endpoints
 
 ### LISTAR USUÁRIOS
 
