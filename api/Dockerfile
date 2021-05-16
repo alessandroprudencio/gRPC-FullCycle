@@ -2,9 +2,11 @@ FROM node:14-alpine
 
 WORKDIR /usr/src/api
 
-COPY . .
+COPY package.json /usr/src/api/
 
 RUN yarn install
+
+COPY . .
 
 EXPOSE 3000
 

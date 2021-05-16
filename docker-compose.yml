@@ -4,12 +4,13 @@ services:
     container_name: 'microservice_user'
     volumes:
       - './microservices/user/:/usr/src/microservices/user'
+      - '/usr/src/microservices/user/node_modules/'
     restart: always
     networks:
       - api_net
     build:
-      context: .
-      dockerfile: microservices/user/Dockerfile
+      context: ./microservices/user
+      dockerfile: Dockerfile
   api:
     container_name: 'api'
     restart: always
@@ -19,11 +20,12 @@ services:
       - api_net
     volumes:
       - './api/:/usr/src/api'
+      - '/usr/src/api/node_modules/'
     depends_on:
       - microservice_user
     build:
-      context: .
-      dockerfile: api/Dockerfile
+      context: ./api
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
 
