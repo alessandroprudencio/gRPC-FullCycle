@@ -1,0 +1,32 @@
+version: '3'
+services:
+  microservice_user:
+    container_name: 'microservice_user'
+    volumes:
+      - './microservices/user/:/usr/src/microservices/user'
+    restart: always
+    networks:
+      - api_net
+    build:
+      context: .
+      dockerfile: microservices/user/Dockerfile
+  api:
+    container_name: 'api'
+    restart: always
+    links:
+      - microservice_user
+    networks:
+      - api_net
+    volumes:
+      - './api/:/usr/src/api'
+    depends_on:
+      - microservice_user
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    ports:
+      - "3000:3000"
+
+networks:
+  api_net:
+    driver: bridge

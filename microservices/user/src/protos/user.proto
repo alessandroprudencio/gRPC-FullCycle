@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+message  User {
+  int32  id = 1;
+  string username = 2;
+  string email = 3;
+  string password = 4;
+}
+
+message GetUserByIdRequest {
+  int32 id = 1;
+}
+
+message GetAllUserRequest {}
+
+message RegisterUserRequest {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message  UpdateUserRequest {
+  User user = 1;
+}
+
+message  UpdateUserResponse {
+  User user = 1;
+}
+
+message  UserResponse {
+  User user = 1;
+}
+
+message  AllUserResponse {
+  repeated User users = 1;
+}
+
+message  DeleteUserResponse {
+  string message = 1 ;
+}
+
+service UserService {
+  rpc getUserById(GetUserByIdRequest) returns (UserResponse);
+  rpc getAllUsers(GetAllUserRequest) returns (AllUserResponse);
+  rpc registerUser(RegisterUserRequest) returns (UserResponse);
+  rpc updateUser(UpdateUserRequest) returns (UpdateUserResponse);
+  rpc deleteUser(GetUserByIdRequest) returns (DeleteUserResponse);
+}
