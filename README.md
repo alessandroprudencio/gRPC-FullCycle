@@ -1,6 +1,6 @@
-# gRPC-FullCycle
+# gRPC-Node
 
-Crud de usuários que se comunica via gRPC com microserviço de usuários
+Crud de usuários que se comunica via gRPC com microsserviço de usuários
 
 ### Pré-requisitos
 
@@ -64,7 +64,6 @@ PUT `users/:id`
 ## EXCLUIR USUÁRIO
 
 DELETE `/users/:id`
-___
 
 ## Construído com
 
