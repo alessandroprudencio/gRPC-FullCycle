@@ -1,6 +1,6 @@
 # gRPC-Node
 
-Crud de usuários que se comunica via gRPC com microsserviço de usuários criado com gRPC
+Crud de usuários REST que se comunica via gRPC com microsserviço de usuários criado com gRPC
 
 ### Pré-requisitos
 
